@@ -49,6 +49,9 @@
     <img src="https://cdn-icons-png.flaticon.com/512/2748/2748558.png" alt="錯誤圖示" />
     <h1>無法顯示網頁</h1>
     <p>很抱歉，此內容暫時無法提供顯示。</p>
+    <a href="/" style="display:inline-block;margin-top:1.5rem;padding:0.5rem 1rem;background-color:#3498db;color:white;text-decoration:none;border-radius:8px;">
+      返回首頁
+    </a>
   </div>
 </body>
 </html>

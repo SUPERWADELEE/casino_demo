@@ -15,4 +15,6 @@ Route::get('/mall', function () {
 Route::get('/error', function () {
     return view('kg3399.error');
 });
-
+Route::get('/activite', function () {
+    return view('kg3399.activite');
+});
