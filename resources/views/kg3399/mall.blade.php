@@ -826,12 +826,6 @@ body{width:100%}
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="" class="layout" data-v-7f2355b8><div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="text-center" data-v-79db060c data-v-7f2355b8><div class="v-dialog__container" style="border-radius:20px;" data-v-79db060c><!----></div></div> <div class="pc-header" data-v-4c75f541 data-v-7f2355b8><div class="inner" data-v-4c75f541><a href="index.html" class="logo" data-v-4c75f541><img src="imgs_v2/303.png" alt data-v-4c75f541></a> <div class="nav" data-v-4c75f541><div class="nav_item" data-v-4c75f541>
         熱門
         <div class="games hot" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
-        真人
-        <div class="games live" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
-        體育
-        <div class="games sport" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
-        棋牌
-        <div class="games chess" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
         彩票
         <div class="games lottery" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
         電子
