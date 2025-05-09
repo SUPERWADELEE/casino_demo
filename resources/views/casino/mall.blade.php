@@ -1,7 +1,101 @@
 <!doctype html>
 <html data-n-head-ssr>
   <head >
-    <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta data-n-head="ssr" name="description" content="KG娛樂城十年信譽保證，菲律賓合法領牌，充值、提款十分鐘到帳。 遊戲種類齊全，優惠多多就是要你發。"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><title>KG娛樂城</title><link data-n-head="ssr" rel="icon" type="image/x-icon" href="imgs_v2/300.png"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><style data-n-head="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
+    <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta data-n-head="ssr" name="description" content="KG娛樂城十年信譽保證，菲律賓合法領牌，充值、提款十分鐘到帳。 遊戲種類齊全，優惠多多就是要你發。"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><title>KG娛樂城</title><link data-n-head="ssr" rel="icon" type="image/x-icon" href="imgs_v2/300.png"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+      <style>
+  @keyframes burst {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.user-welfare .item.one.open {
+  animation: burstOne 0.4s ease-out forwards;
+}
+
+.user-welfare .item.two.open {
+  animation: burstTwo 0.4s ease-out forwards;
+}
+
+@keyframes burstOne {
+  0% {
+    transform: scale(0.3) translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(-50px, -100px);
+    opacity: 1;
+  }
+}
+
+@keyframes burstTwo {
+  0% {
+    transform: scale(0.3) translate(0, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translate(60px, -80px);
+    opacity: 1;
+  }
+}
+@keyframes burstReverse {
+  0% {
+    transform: scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.3) translate(0, 0);
+    opacity: 0;
+  }
+}
+
+.user-welfare .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.3);
+}
+
+.user-welfare .item.open {
+  visibility: visible;
+  animation: burst 0.4s ease-out forwards;
+}
+
+.user-welfare .item.close {
+  visibility: visible; /* 讓動畫能看見 */
+  animation: burstReverse 0.4s ease-in forwards;
+}
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .container, .wrap, .main, .v-application {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+</style>   
+    
+<style data-n-head="vuetify" type="text/css" id="vuetify-theme-stylesheet" nonce="undefined">.v-application a { color: #1976d2; }
 .v-application .primary {
   background-color: #1976d2 !important;
   border-color: #1976d2 !important;
@@ -846,5 +940,61 @@ body{width:100%}
         <div class="games fish" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div></div> <div class="quick_menu" data-v-4c75f541><div class="q" data-v-4c75f541><img src="imgs_v3/2.png" alt data-v-4c75f541>  <span data-v-4c75f541>優惠</span></div> <div class="q" data-v-4c75f541><img src="imgs_v3/4.png" alt data-v-4c75f541> <span data-v-4c75f541>商城</span></div> <div class="q" data-v-4c75f541><img src="imgs_v3/2.png" alt data-v-4c75f541> <span data-v-4c75f541>APP下載</span></div> <div class="q" data-v-4c75f541><img src="imgs_v3/3.png" alt data-v-4c75f541> <span data-v-4c75f541>客服</span></div> <div class="not-login" data-v-4c75f541><div class="sign_in" data-v-4c75f541><img src="imgs_v3/5.png" alt data-v-4c75f541><span data-v-4c75f541>登入</span></div> <div class="sign_up" data-v-4c75f541><img src="imgs_v3/6.png" alt data-v-4c75f541><span data-v-4c75f541>註冊</span></div></div></div></div></div> <div class="main-container" data-v-887a6a70 data-v-7f2355b8><div class="page" data-v-887a6a70><div class="bannerWrap" data-v-887a6a70><!----></div> <div class="typesTabs" data-v-887a6a70></div> <div class="goods" data-v-887a6a70></div> <div id="goodsEnd" data-v-887a6a70></div></div> <div class="v-dialog__container" style="border-radius:20px;" data-v-887a6a70><!----></div></div> <div class="footer" data-v-578f98da data-v-7f2355b8>
   ©2024 KG娛樂城. All Rights Reserves.
 </div> <!----> <!----> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c){return {layout:"default",data:[{}],fetch:{},error:b,state:{loading:a,alert:a,isApp:a,alerObj:{type:"warning",message:"message"},userDetail:{},login:a,mailCount:0,gameList:[],gameGroup:{live:[],sport:[],chess:[],egame:[],lottery:[]},curGameType:"home",acitvityList:[],appDownBar:c,startGameDialog:a,startGameObj:{},isMobile:a,isWebp:a,appTitle:"商城",appSubTitle:"",usdtTeachShow:a,i18n:{routeParams:{}}},serverRendered:c,routePath:"\u002Fmall",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:b}}}}(false,null,true));</script><script src="_nuxt/3e1afeb.js" defer></script><script src="_nuxt/164f91a.js" defer></script><script src="_nuxt/83930b0.js" defer></script><script src="_nuxt/d48f308.js" defer></script><script src="_nuxt/f906dfe.js" defer></script><script src="_nuxt/8860eed.js" defer></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  const target = document.querySelector('div[draggable="true"]');
+  if (target) {
+    const div = document.createElement('div');
+    div.innerHTML = `
+      <div id="user-welfare" class="user-welfare" data-v-7b02648a data-v-7f2355b8>
+        <div style="position: relative;" data-v-7b02648a>
+          <img width="90" src="/hot_v4.png" alt="userWelfare" id="toggleBtn" data-v-7b02648a>
+          <img width="90" src="/float_icon.png" alt="welfare" class="item one" id="imgOne" data-v-7b02648a onclick="window.location.href='/error'" />
+          <img width="90" src="/share_friend.png" alt="welfare" class="item two" id="imgTwo" data-v-7b02648a onclick="window.location.href='/error'" />
+        </div>
+      </div>
+    `;
+    target.appendChild(div);
+
+    const toggleBtn = document.getElementById('toggleBtn');
+    const imgOne = document.getElementById('imgOne');
+    const imgTwo = document.getElementById('imgTwo');
+
+    let shown = false;
+
+    toggleBtn.addEventListener('click', () => {
+      if (!shown) {
+        imgOne.style.visibility = 'visible';
+        imgTwo.style.visibility = 'visible';
+
+        imgOne.classList.remove('close');
+        imgTwo.classList.remove('close');
+        imgOne.classList.add('open');
+        imgTwo.classList.add('open');
+      } else {
+        imgOne.classList.remove('open');
+        imgTwo.classList.remove('open');
+        imgOne.classList.add('close');
+        imgTwo.classList.add('close');
+      }
+      shown = !shown;
+    });
+
+    imgOne.addEventListener('animationend', () => {
+      if (imgOne.classList.contains('close')) {
+        imgOne.classList.remove('close');
+        imgOne.style.visibility = 'hidden';
+      }
+    });
+
+    imgTwo.addEventListener('animationend', () => {
+      if (imgTwo.classList.contains('close')) {
+        imgTwo.classList.remove('close');
+        imgTwo.style.visibility = 'hidden';
+      }
+    });
+  }
+});
+</script>
   </body>
 </html>
