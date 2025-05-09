@@ -3,11 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 
-
-Route::get('/test', function () {
-    return view('casino.test_mall');
-});
-
 Route::get('/mall', function (\Illuminate\Http\Request $request) {
     $userAgent = $request->header('User-Agent');
 
