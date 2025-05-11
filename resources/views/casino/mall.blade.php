@@ -995,6 +995,103 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+const observers = new MutationObserver(() => {
+    console.log('Mutation detected');
+    const firstTab = document.querySelector('.typesTabs .item:nth-child(1)');
+    console.log('firstTab', firstTab);
+    const isActive = firstTab && firstTab.classList.contains('active');
+
+    if (isActive) {
+      document.querySelectorAll('.card .btns span').forEach(span => {
+        if (span.textContent.trim() === '兌換') {
+          span.textContent = '立即抽獎';
+        }
+      });
+    }
+  });
+
+  const tabWrapper = document.querySelector('.typesTabs');
+
+  if (tabWrapper) {
+    observers.observe(tabWrapper, {
+      attributes: true,
+      childList: true,
+      subtree: true
+    });
+  }
+
+  const observer = new MutationObserver(() => {
+  console.log('✅ Mutation detected');
+  
+  const firstTab = document.querySelector('.typesTabs .item:nth-child(1)');
+  const isActive = firstTab && firstTab.classList.contains('active');
+  
+  if (isActive) {
+    document.querySelectorAll('.card .btns span').forEach(span => {
+      if (span.textContent.trim() === '兌換') {
+        span.textContent = '立即抽獎';
+      }
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  function updateButtonTextIfNeeded(retry = 0) {
+    const firstTab = document.querySelector('.typesTabs .item:nth-child(1)');
+    const isActive = firstTab && firstTab.classList.contains('active');
+
+    if (!isActive) return;
+
+    const spans = document.querySelectorAll('.card .btns span');
+    const imgs = document.querySelectorAll('.card .btns img');
+    const price_imgs = document.querySelectorAll('.card .godosPrice img');
+    if (!spans.length) {
+      if (retry < 10) {
+        setTimeout(() => updateButtonTextIfNeeded(retry + 1), 300);
+      } else {
+        console.warn('⚠️ 超過重試次數仍未找到 span');
+      }
+      return;
+    }
+
+    price_imgs.forEach(img => {
+      if(img.src.includes('/assets/mall_v2/amount_icon.jpg')) {
+        img.src = '/assets/mall_v2/golden_coin.png';
+      }
+    });
+    imgs.forEach(img => {
+      if (img.src.includes('/assets/mall_v2/cart.png')) {
+        img.src = '/assets/mall_v2/ticket.png';
+      }
+    });
+    spans.forEach(span => {
+      if (span.textContent.trim() === '兌換') {
+        span.textContent = '抽獎卷*1';
+      }
+    });
+  }
+
+  const observer = new MutationObserver(() => {
+    updateButtonTextIfNeeded();
+  });
+
+  const waitForTabs = setInterval(() => {
+    const tabWrapper = document.querySelector('.typesTabs');
+    if (tabWrapper) {
+      observer.observe(tabWrapper, {
+        attributes: true,
+        childList: true,
+        subtree: true
+      });
+      console.log('✅ 開始監聽 .typesTabs');
+      clearInterval(waitForTabs);
+    } else {
+      console.log('⏳ 等待 .typesTabs 出現...');
+    }
+  }, 200);
+
+});
 </script>
   </body>
 </html>
