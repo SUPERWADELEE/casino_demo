@@ -997,9 +997,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 const observers = new MutationObserver(() => {
-    console.log('Mutation detected');
     const firstTab = document.querySelector('.typesTabs .item:nth-child(1)');
-    console.log('firstTab', firstTab);
     const isActive = firstTab && firstTab.classList.contains('active');
 
     if (isActive) {
@@ -1022,8 +1020,6 @@ const observers = new MutationObserver(() => {
   }
 
   const observer = new MutationObserver(() => {
-  console.log('✅ Mutation detected');
-  
   const firstTab = document.querySelector('.typesTabs .item:nth-child(1)');
   const isActive = firstTab && firstTab.classList.contains('active');
   
@@ -1046,6 +1042,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const spans = document.querySelectorAll('.card .btns span');
     const imgs = document.querySelectorAll('.card .btns img');
     const price_imgs = document.querySelectorAll('.card .godosPrice img');
+    const carousel_imgs = document.querySelectorAll('.main-container .carousel img');
     if (!spans.length) {
       if (retry < 10) {
         setTimeout(() => updateButtonTextIfNeeded(retry + 1), 300);
@@ -1055,11 +1052,14 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+
+
     price_imgs.forEach(img => {
-      if(img.src.includes('/assets/mall_v2/amount_icon.jpg')) {
+      if (img.src.includes('/assets/mall_v2/amount_icon.jpg')) {
         img.src = '/assets/mall_v2/golden_coin.png';
       }
     });
+
     imgs.forEach(img => {
       if (img.src.includes('/assets/mall_v2/cart.png')) {
         img.src = '/assets/mall_v2/ticket.png';
@@ -1070,6 +1070,29 @@ document.addEventListener('DOMContentLoaded', () => {
         span.textContent = '抽獎卷*1';
       }
     });
+
+    function cleanImages() {
+      document.querySelectorAll('img').forEach(img => {
+        const src = img.src;
+
+        const isMeta = src.includes('meta.png');
+        const isDGKG = src.includes('dg_kg');
+        const isPM = src.includes('pm');
+
+        if (isMeta || isDGKG || isPM) {
+          let parent = img;
+          for (let i = 0; i < 3; i++) {
+            parent = parent.parentElement;
+            if (!parent) break;
+          }
+          if (parent) {
+            parent.remove();
+          }
+        }
+      });
+    }
+
+    cleanImages();
   }
 
   const observer = new MutationObserver(() => {
@@ -1084,13 +1107,10 @@ document.addEventListener('DOMContentLoaded', () => {
         childList: true,
         subtree: true
       });
-      console.log('✅ 開始監聽 .typesTabs');
-      clearInterval(waitForTabs);
-    } else {
-      console.log('⏳ 等待 .typesTabs 出現...');
-    }
-  }, 200);
 
+      clearInterval(waitForTabs);
+    } 
+  }, 200);
 });
 </script>
   </body>

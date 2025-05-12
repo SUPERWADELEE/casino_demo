@@ -923,8 +923,6 @@ body,html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:"N
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="" class="layout" data-v-7f2355b8><div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="text-center" data-v-79db060c data-v-7f2355b8><div class="v-dialog__container" style="border-radius:20px;" data-v-79db060c><!----></div></div> <div class="pc-header" data-v-4c75f541 data-v-7f2355b8><div class="inner" data-v-4c75f541><a href="index.html" class="logo" data-v-4c75f541><img src="imgs_v2/303.png" alt data-v-4c75f541></a> <div class="nav" data-v-4c75f541><div class="nav_item" data-v-4c75f541>
         熱門
         <div class="games hot" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
-        彩票
-        <div class="games lottery" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
         電子
         <div class="games egame" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
         捕魚
@@ -1021,7 +1019,39 @@ document.addEventListener('DOMContentLoaded', function () {
     section.style.height = "auto";
   }
 });
+document.addEventListener('DOMContentLoaded', () => {
+  function cleanImages() {
+    document.querySelectorAll('img').forEach(img => {
+      const src = img.src;
 
+      const isMeta = src.includes('meta.png');
+      const isDGKG = src.includes('dg_kg');
+      const isPM = src.includes('pm');
+
+      if (isMeta || isDGKG || isPM) {
+        let parent = img;
+        for (let i = 0; i < 3; i++) {
+          parent = parent.parentElement;
+          if (!parent) break;
+        }
+        if (parent) {
+          parent.remove();
+        }
+      }
+    });
+  }
+
+  cleanImages();
+
+  const observer = new MutationObserver(() => {
+    cleanImages();
+  });
+
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
+});
 </script>
   </body>
 </html>

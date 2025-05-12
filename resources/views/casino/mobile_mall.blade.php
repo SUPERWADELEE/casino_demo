@@ -835,5 +835,62 @@ body{width:100%}
     </symbol>
   </svg>
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="" class="layout" data-v-7f2355b8><div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="text-center" data-v-79db060c data-v-7f2355b8><div class="v-dialog__container" style="border-radius:20px;" data-v-79db060c><!----></div></div> <div class="mb-header" data-v-04cb4635 data-v-7f2355b8><span class="arrow" data-v-04cb4635><svg t="1715999596124" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1628" width="32" height="32" class="icon" data-v-04cb4635><path d="M631.168 183.168a42.666667 42.666667 0 0 1 62.826667 57.621333l-2.496 2.709334L423.04 512l268.48 268.501333a42.666667 42.666667 0 0 1 2.496 57.621334l-2.496 2.709333a42.666667 42.666667 0 0 1-57.621333 2.496l-2.709334-2.496-298.666666-298.666667a42.666667 42.666667 0 0 1-2.496-57.621333l2.496-2.709333 298.666666-298.666667z" fill="#ffffff" p-id="1629" data-v-04cb4635></path></svg></span> <h2 data-v-04cb4635><em data-v-04cb4635></em> <i data-v-04cb4635></i></h2></div> <div class="main-container" data-v-887a6a70 data-v-7f2355b8><div class="page" data-v-887a6a70><div class="bannerWrap" data-v-887a6a70><!----></div> <div class="typesTabs" data-v-887a6a70></div> <div class="goods" data-v-887a6a70></div> <div id="goodsEnd" data-v-887a6a70></div></div> <div class="v-dialog__container" style="border-radius:20px;" data-v-887a6a70><!----></div></div> <div data-v-f4897f38 data-v-7f2355b8><!----> <div class="footer" data-v-f4897f38><div class="item line" data-v-f4897f38><img src="imgs_v3/20.png" alt class="icon" data-v-f4897f38> <span data-v-f4897f38>活動</span></div> <div class="item" data-v-f4897f38><img src="imgs_v3/23.png" alt class="icon" data-v-f4897f38> <span data-v-f4897f38>客服</span></div> <div class="center" data-v-f4897f38><div class="logo" data-v-f4897f38><img src="imgs_v3/home_icon_3.png" alt data-v-f4897f38></div> <span data-v-f4897f38>首頁</span></div> <div class="item line" data-v-f4897f38><img src="imgs_v3/21.png" alt class="icon" data-v-f4897f38> <span data-v-f4897f38>商城</span></div> <div class="item" data-v-f4897f38><img src="imgs_v3/22.png" alt class="icon" data-v-f4897f38> <span data-v-f4897f38>個人</span></div></div></div> <!----> <!----> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c){return {layout:"default",data:[{}],fetch:{},error:c,state:{loading:a,alert:a,isApp:a,alerObj:{type:"warning",message:"message"},userDetail:{},login:a,mailCount:0,gameList:[],gameGroup:{live:[],sport:[],chess:[],egame:[],lottery:[]},curGameType:"home",acitvityList:[],appDownBar:b,startGameDialog:a,startGameObj:{},isMobile:b,isWebp:a,appTitle:"商城",appSubTitle:"",usdtTeachShow:a,i18n:{routeParams:{}}},serverRendered:b,routePath:"\u002Fmall",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:c}}}}(false,true,null));</script><script src="_nuxtm/3e1afeb.js" defer></script><script src="_nuxtm/164f91a.js" defer></script><script src="_nuxtm/83930b0.js" defer></script><script src="_nuxtm/d48f308.js" defer></script><script src="_nuxtm/f906dfe.js" defer></script><script src="_nuxtm/8860eed.js" defer></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  function updateButtonTextIfNeeded(retry = 0) {
+    const firstTab = document.querySelector('.typesTabs .item:nth-child(1)');
+    const isActive = firstTab && firstTab.classList.contains('active');
+
+    if (!isActive) return;
+
+    const spans = document.querySelectorAll('.card .btns span');
+    const imgs = document.querySelectorAll('.card .btns img');
+    const price_imgs = document.querySelectorAll('.card .godosPrice img');
+
+    if (!spans.length) {
+      if (retry < 10) {
+        setTimeout(() => updateButtonTextIfNeeded(retry + 1), 300);
+      } else {
+        console.warn('⚠️ 超過重試次數仍未找到 span');
+      }
+      return;
+    }
+
+    price_imgs.forEach(img => {
+      if (img.src.includes('/assets/mall_v2/amount_icon.jpg')) {
+        img.src = '/assets/mall_v2/golden_coin.png';
+      }
+    });
+
+    imgs.forEach(img => {
+      if (img.src.includes('/assets/mall_v2/cart.png')) {
+        img.src = '/assets/mall_v2/ticket.png';
+      }
+    });
+
+    spans.forEach(span => {
+      if (span.textContent.trim() === '兌換') {
+        span.textContent = '抽獎卷*1';
+      }
+    });
+  }
+
+  const observer = new MutationObserver(() => {
+    updateButtonTextIfNeeded();
+  });
+
+  const waitForTabs = setInterval(() => {
+    const tabWrapper = document.querySelector('.typesTabs');
+    if (tabWrapper) {
+      observer.observe(tabWrapper, {
+        attributes: true,
+        childList: true,
+        subtree: true
+      });
+      clearInterval(waitForTabs);
+    }
+  }, 200);
+});
+</script>
   </body>
 </html>
