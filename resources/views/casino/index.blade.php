@@ -1,7 +1,7 @@
 <!doctype html>
 <html data-n-head-ssr>
   <head >
-    <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta data-n-head="ssr" name="description" content="KG娛樂城十年信譽保證，菲律賓合法領牌，充值、提款十分鐘到帳。 遊戲種類齊全，優惠多多就是要你發。"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><title>KG娛樂城</title><link data-n-head="ssr" rel="icon" type="image/x-icon" href="imgs_v2/300.png"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><meta data-n-head="ssr" name="description" content="KG娛樂城十年信譽保證，菲律賓合法領牌，充值、提款十分鐘到帳。 遊戲種類齊全，優惠多多就是要你發。"><meta data-n-head="ssr" name="format-detection" content="telephone=no"><title>PA娛樂城</title><link data-n-head="ssr" rel="icon" type="image/x-icon" href="imgs_v2/300.png"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
 
 <style>
   @keyframes burst {
