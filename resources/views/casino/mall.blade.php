@@ -932,13 +932,11 @@ body{width:100%}
     <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="" class="layout" data-v-7f2355b8><div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="v-overlay theme--dark" style="z-index:9999;" data-v-7f2355b8><div class="v-overlay__scrim" style="opacity:0;background-color:#212121;border-color:#212121;"></div></div> <div class="text-center" data-v-79db060c data-v-7f2355b8><div class="v-dialog__container" style="border-radius:20px;" data-v-79db060c><!----></div></div> <div class="pc-header" data-v-4c75f541 data-v-7f2355b8><div class="inner" data-v-4c75f541><a href="index.html" class="logo" data-v-4c75f541><img src="imgs_v2/303.png" alt data-v-4c75f541></a> <div class="nav" data-v-4c75f541><div class="nav_item" data-v-4c75f541>
         熱門
         <div class="games hot" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
-        彩票
-        <div class="games lottery" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
         電子
         <div class="games egame" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div><div class="nav_item" data-v-4c75f541>
         捕魚
         <div class="games fish" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div></div> <div class="quick_menu" data-v-4c75f541><div class="q" data-v-4c75f541><img src="imgs_v3/2.png" alt data-v-4c75f541>  <span data-v-4c75f541>優惠</span></div> <div class="q" data-v-4c75f541><img src="imgs_v3/4.png" alt data-v-4c75f541> <span data-v-4c75f541>商城</span></div> <div class="q" data-v-4c75f541><img src="imgs_v3/2.png" alt data-v-4c75f541> <span data-v-4c75f541>APP下載</span></div> <div class="q" data-v-4c75f541><img src="imgs_v3/3.png" alt data-v-4c75f541> <span data-v-4c75f541>客服</span></div> <div class="not-login" data-v-4c75f541><div class="sign_in" data-v-4c75f541><img src="imgs_v3/5.png" alt data-v-4c75f541><span data-v-4c75f541>登入</span></div> <div class="sign_up" data-v-4c75f541><img src="imgs_v3/6.png" alt data-v-4c75f541><span data-v-4c75f541>註冊</span></div></div></div></div></div> <div class="main-container" data-v-887a6a70 data-v-7f2355b8><div class="page" data-v-887a6a70><div class="bannerWrap" data-v-887a6a70><!----></div> <div class="typesTabs" data-v-887a6a70></div> <div class="goods" data-v-887a6a70></div> <div id="goodsEnd" data-v-887a6a70></div></div> <div class="v-dialog__container" style="border-radius:20px;" data-v-887a6a70><!----></div></div> <div class="footer" data-v-578f98da data-v-7f2355b8>
-  ©2024 KG娛樂城. All Rights Reserves.
+  ©2024 PA娛樂城. All Rights Reserves.
 </div> <!----> <!----> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c){return {layout:"default",data:[{}],fetch:{},error:b,state:{loading:a,alert:a,isApp:a,alerObj:{type:"warning",message:"message"},userDetail:{},login:a,mailCount:0,gameList:[],gameGroup:{live:[],sport:[],chess:[],egame:[],lottery:[]},curGameType:"home",acitvityList:[],appDownBar:c,startGameDialog:a,startGameObj:{},isMobile:a,isWebp:a,appTitle:"商城",appSubTitle:"",usdtTeachShow:a,i18n:{routeParams:{}}},serverRendered:c,routePath:"\u002Fmall",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:b}}}}(false,null,true));</script><script src="_nuxt/3e1afeb.js" defer></script><script src="_nuxt/164f91a.js" defer></script><script src="_nuxt/83930b0.js" defer></script><script src="_nuxt/d48f308.js" defer></script><script src="_nuxt/f906dfe.js" defer></script><script src="_nuxt/8860eed.js" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function () {
@@ -1045,7 +1043,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const carousel_imgs = document.querySelectorAll('.main-container .carousel img');
     if (!spans.length) {
       if (retry < 10) {
-        setTimeout(() => updateButtonTextIfNeeded(retry + 1), 300);
+        setTimeout(() => updateButtonTextIfNeeded(retry + 1), 100);
       } else {
         console.warn('⚠️ 超過重試次數仍未找到 span');
       }
@@ -1055,7 +1053,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     price_imgs.forEach(img => {
-      if (img.src.includes('/assets/mall_v2/amount_icon.jpg')) {
+      if (img.src.includes('/assets/mall_v2/amount_icon.png')) {
         img.src = '/assets/mall_v2/golden_coin.png';
       }
     });

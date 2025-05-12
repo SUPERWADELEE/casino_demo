@@ -842,7 +842,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isActive = firstTab && firstTab.classList.contains('active');
 
     if (!isActive) return;
-
     const spans = document.querySelectorAll('.card .btns span');
     const imgs = document.querySelectorAll('.card .btns img');
     const price_imgs = document.querySelectorAll('.card .godosPrice img');
@@ -857,7 +856,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     price_imgs.forEach(img => {
-      if (img.src.includes('/assets/mall_v2/amount_icon.jpg')) {
+      if (img.src.includes('/assets/mall_v2/amount_icon.png')) {
         img.src = '/assets/mall_v2/golden_coin.png';
       }
     });

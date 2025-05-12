@@ -947,7 +947,7 @@ body,html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:"N
   </div>
 </div>
 <div class="footer" data-v-578f98da data-v-7f2355b8>
-  ©2024 KG娛樂城. All Rights Reserves.
+  ©2024 PA娛樂城. All Rights Reserves.
 </div> <!----> <!----> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c,d,e){return {layout:"default",data:[{}],fetch:{},error:b,state:{loading:a,alert:a,isApp:a,alerObj:{type:"warning",message:"message"},userDetail:{},login:a,mailCount:0,gameList:[],gameGroup:{live:[],sport:[],chess:[],egame:[],lottery:[]},curGameType:"home",acitvityList:[],appDownBar:c,startGameDialog:a,startGameObj:{},isMobile:a,isWebp:a,appTitle:d,appSubTitle:d,usdtTeachShow:a,i18n:{routeParams:{}}},serverRendered:c,routePath:e,config:{_app:{basePath:e,assetsPath:"\u002F_nuxt\u002F",cdnURL:b}}}}(false,null,true,"","\u002F"));</script><script src="_nuxt/3e1afeb.js" defer></script><script src="_nuxt/5dba238.js" defer></script><script src="_nuxt/83930b0.js" defer></script><script src="_nuxt/e347167.js" defer></script><script src="_nuxt/c5f611e.js" defer></script><script src="_nuxt/d48f308.js" defer></script><script src="_nuxt/f906dfe.js" defer></script><script src="_nuxt/8860eed.js" defer></script>
 <script>
 window.addEventListener('DOMContentLoaded', function () {
