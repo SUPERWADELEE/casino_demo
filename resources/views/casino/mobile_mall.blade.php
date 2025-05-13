@@ -891,5 +891,78 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 200);
 });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+   
+
+    let listReady = false;
+
+    const interval = setInterval(() => {
+      const list = document.querySelector('.pc-layout-inner .list');
+      
+
+      if (list) {
+       
+        clearInterval(interval); // 找到 .list 就不用再查
+
+        listReady = true;
+        const targetBlock = list.querySelector('#activity1350274');
+
+          if (targetBlock) {
+            console.log('');
+
+            const targetImg = targetBlock.querySelector('img');
+            if (targetImg) {
+              console.log('');
+              targetImg.src = './activity/shoppingActivity.png';
+              targetImg.alt = '超值優惠 盡在PA商城';
+
+              observer.disconnect(); // ✅ 成功後停止觀察
+            } 
+          }
+
+        // 設定監聽器：等 .list 裡面有東西（包含 activity1350274）才處理
+        const observers = new MutationObserver(() => {
+          console.log('wefwefwef')
+          const targetBlock = list.querySelector('#activity1350274');
+
+          if (targetBlock) {
+            console.log('');
+
+            const targetImg = targetBlock.querySelector('img');
+            if (targetImg) {
+              console.log('');
+              targetImg.src = './activity/shoppingActivity.png';
+              targetImg.alt = '超值優惠 盡在PA商城';
+
+              observer.disconnect(); // ✅ 成功後停止觀察
+            } else {
+              console.log('📷 找到區塊但還沒圖，繼續等...');
+            }
+          }
+        });
+
+        observers.observe(list, {
+          childList: true,
+          subtree: true,
+        });
+
+        // 最多等 10 秒
+        setTimeout(() => {
+          observer.disconnect();
+          console.warn('🛑 等太久沒出現目標，結束監聽');
+        }, 10000);
+      }
+    }, 300); // 每 300ms 嘗試找一次 .list
+
+    // 最多等 10 秒找到 list
+    setTimeout(() => {
+      if (!listReady) {
+        clearInterval(interval);
+        console.warn('🛑 10 秒內未找到 .list，結束尋找');
+      }
+    }, 10000);
+  });
+</script>
   </body>
 </html>

@@ -838,5 +838,38 @@ body,html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-family:"N
         <div class="games fish" data-v-4c75f541><div class="game_inner" data-v-4c75f541></div></div></div></div> <div class="quick_menu" data-v-4c75f541><div class="q" data-v-4c75f541><img src="/imgs_v3/2.png" alt data-v-4c75f541> <span data-v-4c75f541>USDT</span></div> <div class="q" data-v-4c75f541><img src="/imgs_v3/1.png" alt data-v-4c75f541> <span data-v-4c75f541>優惠</span></div> <div class="q" data-v-4c75f541><img src="/imgs_v3/4.png" alt data-v-4c75f541> <span data-v-4c75f541>商城</span></div> <div class="q" data-v-4c75f541><img src="/imgs_v3/2.png" alt data-v-4c75f541> <span data-v-4c75f541>APP下載</span></div> <div class="q" data-v-4c75f541><img src="/imgs_v3/3.png" alt data-v-4c75f541> <span data-v-4c75f541>客服</span></div> <div class="not-login" data-v-4c75f541><div class="sign_in" data-v-4c75f541><img src="/imgs_v3/5.png" alt data-v-4c75f541><span data-v-4c75f541>登入</span></div> <div class="sign_up" data-v-4c75f541><img src="/imgs_v3/6.png" alt data-v-4c75f541><span data-v-4c75f541>註冊</span></div></div></div></div></div> <div class="pc-layout-inner" data-v-40999cb4 data-v-7f2355b8><div class="list" data-v-40999cb4></div></div> <div class="footer" data-v-578f98da data-v-7f2355b8>
   ©2024 PA娛樂城. All Rights Reserves.
 </div> <!----> <!----> <!----></div></div></div><script>window.__NUXT__=(function(a,b,c){return {layout:"default",data:[{}],fetch:{},error:b,state:{loading:a,alert:a,isApp:a,alerObj:{type:"warning",message:"message"},userDetail:{},login:a,mailCount:0,gameList:[],gameGroup:{live:[],sport:[],chess:[],egame:[],lottery:[]},curGameType:"home",acitvityList:[],appDownBar:c,startGameDialog:a,startGameObj:{},isMobile:a,isWebp:a,appTitle:"優惠活動",appSubTitle:"",usdtTeachShow:a,i18n:{routeParams:{}}},serverRendered:c,routePath:"\u002Factivite",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:b}}}}(false,null,true));</script><script src="/_nuxt/3e1afeb.js" defer></script><script src="/_nuxt/71a7d98.js" defer></script><script src="/_nuxt/d48f308.js" defer></script><script src="/_nuxt/f906dfe.js" defer></script><script src="/_nuxt/8860eed.js" defer></script>
+
+<script>
+
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const list = document.querySelector('.pc-layout-inner .list');
+    
+
+    if (!list) {
+      console.warn('❌ 沒有找到 .list 元素');
+      return;
+    }
+
+    // 建立 MutationObserver 監聽子節點變動
+    const observer = new MutationObserver(() => {
+      const targetImg = list.querySelector('img[alt="超值優惠 盡在KG商城"]');
+
+      if (targetImg) {
+        
+
+        targetImg.src = './activity/shoppingActivity.png';
+        targetImg.alt = '"超值優惠 盡在PA商城"';
+
+        observer.disconnect(); // ✅ 找到就停止監聽
+      }
+    });
+
+    observer.observe(list, {
+      childList: true,
+      subtree: true,
+    });
+  });
+</script>
   </body>
 </html>
